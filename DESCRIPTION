@@ -1,0 +1,10 @@
+Package: Rkeedio
+Title: Keedio R functions
+Version: 0.0.1
+Authors@R: person("Alessio", "Comisso", email = "acomisso@keedio.com", role = c("aut", "cre"))
+Description: What the package does (one paragraph).
+Depends:
+    R (>= 3.2.3)
+License: APL2
+LazyData: false
+RoxygenNote: 5.0.1.9000
