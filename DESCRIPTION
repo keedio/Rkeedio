@@ -8,3 +8,5 @@ Depends:
 License: APL2
 LazyData: false
 RoxygenNote: 5.0.1.9000
+Imports: httr, RCurl
+Depends: httr, RCurl
