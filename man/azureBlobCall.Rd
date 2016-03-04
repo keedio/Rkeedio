@@ -12,8 +12,7 @@ azureBlobCall(url, verb, key, requestBody = NULL, headers = NULL,
 
 \item{verb}{"PUT GET CREATE DELETE"}
 
-\item{key}{"SAS ket to access the blob"
-azureBlobCall()}
+\item{key}{"SAS ket to access the blob"}
 }
 \description{
 A function to call Azure Blob using httr

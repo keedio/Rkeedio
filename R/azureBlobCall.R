@@ -3,8 +3,7 @@
 #' @param url url of the blob
 #' @param verb "PUT GET CREATE DELETE" 
 #' @param key "SAS ket to access the blob"
-
-#' azureBlobCall() 
+#' @export
 azureBlobCall <- function(url, verb, key, requestBody=NULL, headers=NULL, ifMatch="", md5="") { 
   urlcomponents <- httr::parse_url(url)
   account <- gsub(".blob.core.windows.net", "", urlcomponents$hostname, fixed = TRUE)

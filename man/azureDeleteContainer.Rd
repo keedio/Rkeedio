@@ -11,8 +11,7 @@ azureDeleteContainer(sa, container, key)
 
 \item{container}{"Name of the container"}
 
-\item{key}{"SAS key to access the blob"
-azureDeleteContainer()}
+\item{key}{"SAS key to access the blob"}
 }
 \description{
 A function to create a Blob  container

@@ -11,8 +11,7 @@ azureCreateContainer(sa, container, key)
 
 \item{container}{"Name of the container"}
 
-\item{key}{"SAS ket to access the blob"
-azureCreateContainer()}
+\item{key}{"SAS ket to access the blob"}
 }
 \description{
 A function to create a Blob  container

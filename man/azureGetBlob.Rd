@@ -13,8 +13,7 @@ azureGetBlob(sa, container, key, file)
 
 \item{key}{"SAS key to access the blob"}
 
-\item{file}{"File to upload"
-azureGetBlob()}
+\item{file}{"File to upload"}
 }
 \description{
 A function to get a file from a  Blob  container

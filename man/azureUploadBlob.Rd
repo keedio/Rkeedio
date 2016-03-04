@@ -13,8 +13,7 @@ azureUploadBlob(sa, container, key, file)
 
 \item{key}{"SAS ket to access the blob"}
 
-\item{file}{"File to upload"
-azureUploadBlob()}
+\item{file}{"File to upload"}
 }
 \description{
 A function to upload a file to a Blob  container
