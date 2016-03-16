@@ -4,14 +4,16 @@
 \alias{azureCreateContainer}
 \title{A function to create a Blob  container}
 \usage{
-azureCreateContainer(sa, container, key)
+azureCreateContainer(sa, container, key, verbose = FALSE)
 }
 \arguments{
 \item{sa}{"Azure Storage Account"}
 
 \item{container}{"Name of the container"}
 
-\item{key}{"SAS ket to access the blob"}
+\item{key}{"SAS key to access the blob"}
+
+\item{verbose(optional)}{"set to TRUE to get full information about the REST call"}
 }
 \description{
 A function to create a Blob  container

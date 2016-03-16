@@ -2,9 +2,10 @@
 % Please edit documentation in R/azureUploadBlob.R
 \name{azureUploadBlob}
 \alias{azureUploadBlob}
-\title{A function to upload a file to a Blob  container}
+\title{A function to upload a file to a Blob container,  
+inside the container the file will keep the same name}
 \usage{
-azureUploadBlob(sa, container, key, file)
+azureUploadBlob(sa, container, key, file, verbose = FALSE)
 }
 \arguments{
 \item{sa}{"Azure Storage Account"}
@@ -14,8 +15,11 @@ azureUploadBlob(sa, container, key, file)
 \item{key}{"SAS ket to access the blob"}
 
 \item{file}{"File to upload"}
+
+\item{verbose(optional)}{"set to TRUE to get full information about the REST call"}
 }
 \description{
-A function to upload a file to a Blob  container
+A function to upload a file to a Blob container,  
+inside the container the file will keep the same name
 }
 

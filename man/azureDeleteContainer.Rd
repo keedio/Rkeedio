@@ -2,9 +2,9 @@
 % Please edit documentation in R/azureDeleteContainer.R
 \name{azureDeleteContainer}
 \alias{azureDeleteContainer}
-\title{A function to create a Blob  container}
+\title{A function to delete a Blob  container}
 \usage{
-azureDeleteContainer(sa, container, key)
+azureDeleteContainer(sa, container, key, verbose = FALSE)
 }
 \arguments{
 \item{sa}{"Azure Storage Account"}
@@ -12,8 +12,10 @@ azureDeleteContainer(sa, container, key)
 \item{container}{"Name of the container"}
 
 \item{key}{"SAS key to access the blob"}
+
+\item{verbose(optional)}{"set to TRUE to get full information about the REST call"}
 }
 \description{
-A function to create a Blob  container
+A function to delete a Blob  container
 }
 

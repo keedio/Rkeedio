@@ -4,13 +4,14 @@
 #' @param verb "PUT GET CREATE DELETE" 
 #' @param key "SAS ket to access the blob"
 #' @export
-azureBlobCall <- function(url, verb, key, requestBody=NULL, headers=NULL, ifMatch="", md5="") { 
+azureBlobCall <- function(url, verb, key, requestBody=NULL, headers=NULL, ifMatch="", md5="",verbose = FALSE) { 
   urlcomponents <- httr::parse_url(url)
   account <- gsub(".blob.core.windows.net", "", urlcomponents$hostname, fixed = TRUE)
   container <- urlcomponents$path
 
   # get timestamp in us locale
-  lct <- Sys.getlocale("LC_TIME"); Sys.setlocale("LC_TIME", "us")
+  lct <- Sys.getlocale("LC_TIME"); 
+  #Sys.setlocale("LC_TIME", "us")
   `x-ms-date` <- format(Sys.time(),"%a, %d %b %Y %H:%M:%S %Z", tz="GMT")
   Sys.setlocale("LC_TIME", lct)
 
@@ -55,9 +56,13 @@ azureBlobCall <- function(url, verb, key, requestBody=NULL, headers=NULL, ifMatc
 
   # make the call
   headers_final <- add_headers(Authorization=authorizationtoken, headers, `Content-Type` = `Content-Type`)
+  if(verbose) {
   call <- httr::VERB(verb=verb, url=url, config=headers_final, body=requestBody, verbose())
-
   print("signaturestring");print(signaturestring); 
   print(headers_final); print(call)
+  } else {
+  call <- httr::VERB(verb=verb, url=url, config=headers_final, body=requestBody)
+  } 
+
   return(content(call))
 }

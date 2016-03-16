@@ -5,7 +5,7 @@
 \title{A function to call Azure Blob using httr}
 \usage{
 azureBlobCall(url, verb, key, requestBody = NULL, headers = NULL,
-  ifMatch = "", md5 = "")
+  ifMatch = "", md5 = "", verbose = FALSE)
 }
 \arguments{
 \item{url}{url of the blob}

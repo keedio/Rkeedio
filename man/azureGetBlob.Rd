@@ -2,9 +2,9 @@
 % Please edit documentation in R/azureGetBlob.R
 \name{azureGetBlob}
 \alias{azureGetBlob}
-\title{A function to get a file from a  Blob  container}
+\title{A function to get a file from a  Blob  container and store it in memory.}
 \usage{
-azureGetBlob(sa, container, key, file)
+azureGetBlob(sa, container, key, file, verbose = FALSE)
 }
 \arguments{
 \item{sa}{"Azure Storage Account"}
@@ -14,8 +14,10 @@ azureGetBlob(sa, container, key, file)
 \item{key}{"SAS key to access the blob"}
 
 \item{file}{"File to upload"}
+
+\item{verbose(optional)}{"set to TRUE to get full information about the REST call"}
 }
 \description{
-A function to get a file from a  Blob  container
+A function to get a file from a  Blob  container and store it in memory.
 }
 
